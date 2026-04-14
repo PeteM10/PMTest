@@ -27,5 +27,5 @@ jobs:
       - uses: actions/checkout@v4
       - run: dotnet --list-runtimes
       - run: dotnet --list-sdks
-      - run: dotnet build PMTest/PMTest.csproj -c Release
+      - run: dotnet build PMTest/PMConsoleTest/PMTest.csproj -c Release
 
