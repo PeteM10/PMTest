@@ -1,0 +1,17 @@
+name: PMTest_gh
+on:
+  push:
+    paths: 
+      - 'PMTest/.github/workflows/PMTest_gh.yml'
+  workflow_dispatch: #Manual trigger
+jobs:
+  cli: 
+    runs-on: ubuntu-latest
+    steps:
+      - run: env
+      - run: gh --version
+      - run: gh auth status
+      - run: gh repo list
+      - run: issue list
+      - run: gh workflow list
+      - run: gh api /repos/:owner/:repo/actions/workflows
