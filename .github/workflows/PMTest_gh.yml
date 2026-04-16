@@ -13,6 +13,7 @@ jobs:
       #It has permissions to access the repository where the workflow is running.
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
+      - uses: actions/checkout@v4
       - run: env
       - run: gh --version
       - run: gh auth status
