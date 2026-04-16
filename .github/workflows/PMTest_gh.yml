@@ -7,6 +7,11 @@ on:
 jobs:
   cli: 
     runs-on: ubuntu-latest
+    env:
+      #GITHUB_TOKEN is automatically created by GitHub for every Workflow run 
+      #and can be used to authenticate with the GitHub API. 
+      #It has permissions to access the repository where the workflow is running.
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - run: env
       - run: gh --version
